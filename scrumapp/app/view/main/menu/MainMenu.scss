@@ -1,0 +1,33 @@
+
+.#{$prefix}treelist-nav {
+
+    .#{$prefix}treelist-root-container {
+        margin-top: 10px;
+    }
+
+    .#{$prefix}treelist-item-expander {
+        left: auto;
+        right: 0;
+    }
+
+    .#{$prefix}treelist-item-icon {
+        left: 0;
+    }
+
+    .#{$prefix}treelistitem {
+        cursor: pointer;
+    }
+
+}
+
+.#{$prefix}treelist-nav.x-treelist-micro {
+
+    .#{$prefix}treelist-item-selected.x-treelist-item-tool {
+        background-color: $base-color;
+    }
+
+    .#{$prefix}treelist-item-tool {
+        cursor: pointer;
+    }
+
+}

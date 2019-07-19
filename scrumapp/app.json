@@ -1,0 +1,149 @@
+{
+  "name": "MyScrum",
+  "namespace": "Scrum",
+  "version": "2.0.0",
+  "framework": "ext",
+  "toolkit": "classic",
+  "theme": "theme-triton",
+  "indexHtmlPath": "index.html",
+  "locale": "ru",
+  "requires": [
+    "ux",
+    "locale",
+    "font-awesome",
+    "extjs653patch",
+    "eirc",
+    "eirc-autotestid",
+    "scrumapp-sim"
+  ],
+  "classpath": [
+    "app"
+  ],
+  "overrides": [
+    "overrides"
+  ],
+  "fashion": {
+    "missingParameters": "error",
+    "inliner": {
+      "enable": false
+    }
+  },
+  "sass": {
+    "namespace": "Scrum",
+    "generated": {
+      "var": "sass/save.scss",
+      "src": "sass/save"
+    },
+    "etc": [
+      "sass/etc/all.scss"
+    ],
+    "var": [
+      "sass/var/all.scss",
+      "sass/var"
+    ],
+    "src": [
+      "sass/src"
+    ]
+  },
+  "js": [
+    {
+      "path": "${framework.dir}/build/ext-all-debug.js"
+    },
+    {
+      "path": "app.js",
+      "bundle": true
+    }
+  ],
+  "css": [
+    {
+      "path": "${build.out.css.path}",
+      "bundle": true,
+      "exclude": [
+        "fashion"
+      ]
+    }
+  ],
+  "loader": {
+    "cache": false,
+    "cacheParam": "_dc"
+  },
+  "production": {
+    "output": {
+      "appCache": {
+        "enable": true,
+        "path": "cache.appcache"
+      }
+    },
+    "loader": {
+      "cache": "${build.timestamp}"
+    },
+    "cache": {
+      "enable": true
+    },
+    "compressor": {
+      "type": "yui"
+    }
+  },
+  "testing": {
+  },
+  "development": {
+    "watch": {
+      "delay": 250
+    }
+  },
+  "bootstrap": {
+    "base": "${app.dir}",
+    "microloader": "bootstrap.js",
+    "css": "bootstrap.css"
+  },
+  "output": {
+    "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+    "appCache": {
+      "enable": false
+    }
+  },
+  "cache": {
+    "enable": false,
+    "deltas": true
+  },
+  "appCache": {
+    "cache": [
+      "index.html"
+    ],
+    "network": [
+      "*"
+    ],
+    "fallback": []
+  },
+  "resources": [
+    {
+      "path": "resources",
+      "output": "shared"
+    }
+  ],
+  "archivePath": "archive",
+  "slicer": null,
+
+// См. разбор проблемы сборки в тикете https://support.sencha.com/#ticket-42723
+//  "slicer": {
+//    "js": [
+//      {
+//        "path": "sass/example/custom.js",
+//        "isWidgetManifest": true
+//      }
+//    ],
+//    "output": {
+//      "appCache": {
+//        "enable": false
+//      }
+//    },
+//    "cache": {
+//      "enable": false
+//    }
+//  },
+
+  "ignore": [
+    "(^|/)CVS(/?$|/.*?$)"
+  ],
+  "id": "9c0f35d2-c252-48f7-8ac0-2a06fab83960"
+}

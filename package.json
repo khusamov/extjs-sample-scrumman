@@ -1,0 +1,23 @@
+{
+  "name": "w_extjs_sample_scrumapp",
+  "version": "2.0.0",
+  "description": "Управление разработкой ПО по методике Scrum (учебный пример)",
+  "author": "Khusamov Sukhrob <khusamov@yandex.ru>",
+  "license": "ISC",
+  "main": "scrumapp/index.html",
+  "repository": {
+    "type": "mercurial",
+    "url": "http://10.53.82.191:8000/w_extjs_sample_scrumman"
+  },
+  "scripts": {
+    "start": "cd scrumapp && sencha app watch",
+    "start:fashion": "cd scrumapp && sencha app watch --fashion",
+    "build": "npm run build:production",
+    "build:testing": "cd scrumapp && cls && sencha app build testing",
+    "build:production": "cd scrumapp && cls && sencha app build production"
+  },
+  "devDependencies": {
+    "infogorod_w_extjs_common": "^1.6.0",
+    "eirc-w-extjs-sdk": "git+https://sopr:soprsopr@repo.mos.ru/eirc_w_extjs_sdk.git#v6.5.3-57"
+  }
+}
